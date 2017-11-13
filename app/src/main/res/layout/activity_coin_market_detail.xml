@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jpratt.cryptotracker.CoinMarketDetailActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/marketSymbolLabel"
+        android:layout_width="119dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="16dp"
+        android:text="Market"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification.Title"
+        app:layout_constraintBottom_toTopOf="@+id/highLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/marketSymbol"
+        android:layout_width="112dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        app:layout_constraintBottom_toTopOf="@+id/high"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/marketSymbolLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/highLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="24dp"
+        android:text="High"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/high"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/marketSymbolLabel" />
+
+    <TextView
+        android:id="@+id/lowLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="8dp"
+        android:text="Low"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/low"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/highLabel" />
+
+    <TextView
+        android:id="@+id/volumeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:text="($) Volume"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastLabel" />
+
+    <TextView
+        android:id="@+id/lastLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="16dp"
+        android:text="Last"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/last"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/askLabel" />
+
+    <TextView
+        android:id="@+id/baseVolumeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="(BTC) Volume"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volume" />
+
+    <TextView
+        android:id="@+id/bidLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="8dp"
+        android:text="Bid"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/bid"
+        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lowLabel" />
+
+    <TextView
+        android:id="@+id/askLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="12dp"
+        android:text="Ask"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/ask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bidLabel" />
+
+    <TextView
+        android:id="@+id/openBuyOrdersLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Open Buy Orders"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baseVolume" />
+
+    <TextView
+        android:id="@+id/openSellOrdersLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Open Sell Orders"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openBuyOrdersLabel" />
+
+    <TextView
+        android:id="@+id/buySellLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="154dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Buy/Sell Order Ratio"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openSellOrders"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/high"
+        android:layout_width="101dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/low"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/marketSymbol" />
+
+    <TextView
+        android:id="@+id/low"
+        android:layout_width="101dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/high" />
+
+    <TextView
+        android:id="@+id/bid"
+        android:layout_width="101dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/low" />
+
+    <TextView
+        android:id="@+id/ask"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@android:color/holo_green_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bid" />
+
+    <TextView
+        android:id="@+id/last"
+        android:layout_width="101dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ask" />
+
+    <TextView
+        android:id="@+id/volume"
+        android:layout_width="134dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/volumeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/last" />
+
+    <TextView
+        android:id="@+id/baseVolume"
+        android:layout_width="136dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/baseVolumeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/volume" />
+
+    <TextView
+        android:id="@+id/openBuyOrders"
+        android:layout_width="118dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginTop="7dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baseVolume" />
+
+    <TextView
+        android:id="@+id/openSellOrders"
+        android:layout_width="117dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openBuyOrders" />
+
+    <TextView
+        android:id="@+id/buySellOrderRatio"
+        android:layout_width="127dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="153dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openSellOrders"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
